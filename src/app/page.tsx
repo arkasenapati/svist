@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from "react";
+import Icon from "./icon";
 
 const LOGO_URL = "/images-removebg-preview.png";
 const BG_URL = "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/d6dfb3181348827.651ed2ad18051.png";
@@ -587,16 +588,16 @@ export default function SVISTWebsite() {
               </h2>
               <div className="divider-orange" />
 
-              <div className="mt-4 space-y-5 text-sm">
+              <div className="mt-4 flex-center space-y-5 text-sm">
                 {[
-                  ["📍","Address","Dakshin Gobindapur, P.S. Sonarpur, Kolkata – 700145, West Bengal"],
-                  ["📞","Phone","+91 98310 84446  ·  +91 33 2437-9913"],
-                  ["✉️","Email","info@svist.org"],
-                  ["🌐","Website","www.svist.org"],
+                  [<Icon name="location"/>, "Address", "Dakshin Gobindapur, P.S. Sonarpur, Kolkata – 700145, West Bengal"],
+                  [<Icon name="call"/>,"Phone","+91 98310 84446  ·  +91 33 2437-9913"],
+                  [<Icon name="mail"/>,"info@svist.org"],
+                  [<Icon name="www"/>,"www.svist.org"],
                 ].map(([icon,label,val]) => (
-                  <div key={label as string} className="flex gap-3">
+                  <div key={label as string} className="flex items-center justify-center v-screen gap-3">
                     <span className="text-base mt-0.5">{icon}</span>
-                    <div>
+                    <div className="w-full">
                       <div className="mono text-xs font-bold uppercase tracking-wider" style={{ color: "var(--orange)" }}>{label}</div>
                       <div className="text-neutral-700 mt-0.5">{val}</div>
                     </div>
