@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useRef } from "react";
-import Icon from "./Icon";
+import Icon from "./logos";
 
 const LOGO_URL = "/images-removebg-preview.png";
 const BG_URL = "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/d6dfb3181348827.651ed2ad18051.png";
